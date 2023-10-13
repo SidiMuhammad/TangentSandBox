@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Tangent Sand Box</title>
+    </head>
+    <body>
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#8CC8FF"/>
+                    <stop offset="100%" stop-color="#5A96FF"/>
+                </linearGradient>
+                <linearGradient id="grad2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#9600FF"/>
+                    <stop offset="100%" stop-color="#5A00A0"/>
+                </linearGradient>
+                <linearGradient id="grad3" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#5A00AA"/>
+                    <stop offset="100%" stop-color="#3C0064"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        <div class="card-corner">
+            <span class="option">R</span>
+            <span class="option" onclick="endPath()">E</span>
+        </div>
+        <div class="overlay hidden">
+            <div class="card-setting">
+                <div class="card-content">
+                    <span class="node-id"></span>
+                    <div class="card-input">
+                        <span>Tangent</span>
+                        <div id="tangent" class="switch" onclick="toggleSwitch(this)">
+                            <span id="B" class="option">B</span>
+                            <span id="T" class="option on">T</span>
+                        </div>
+                    </div>
+                    <div class="card-input">
+                        <span>Radius</span>
+                        <div id="radius" class="switch" onclick="toggleSwitch(this)">
+                            <span id="S" class="option">S</span>
+                            <span id="M" class="option on">M</span>
+                            <span id="L" class="option">L</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <span class="option no" onclick="closeBox()">N</span>
+                    <span class="option yes on" onclick="confirm()">Y</span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="peg.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
